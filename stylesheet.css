@@ -1,10 +1,13 @@
 body {
     margin: 0px;
     padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .website-contents-container {
-    width: 100vw;
+    width: 131vh;
     height: 100vh;
     background: black;
 
@@ -13,68 +16,188 @@ body {
     align-content: flex-start;
 }
 
-.box1 {
+.main-container-banner {
     background: hotpink;
-    width: 50%;
+    width: 100%;
     height: 20%;
+
+    display: flex;
+    padding: .5%;
+    box-sizing: border-box; /*makes padding not effect width or height*/
+
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
-.box2 {
-    background: seagreen;
-    width: 50%;
-    height: 20%;
-}
+    .banner-icon {
+        background: whitesmoke;
+        height: 75%;
+        aspect-ratio: 1/1;
 
-.box3 {
+        margin-right: auto;
+    }
+
+    .banner-miniicon {
+        background: whitesmoke;
+        height: 20%;
+        aspect-ratio: 1/1;
+        margin-left: .5%;
+        
+    }
+
+.main-container-musicplayer {
     background: skyblue;
     width: 100%;
     height: 5%;
 }
 
-.box4 {
+.main-container-userpanel {
     background: rgb(235, 233, 135);
-    width: 10%;
+    width: 15%;
     height: 65%;
 }
 
-.box5 {
+.main-container-main {
     background: rgb(209, 17, 17);
     width: 60%;
     height: 65%;
 }
 
-.box6 {
+    .main-title {
+        background: darkgray;
+        width: 100%;
+        height: 8%;
+    }
+
+    .main-contents {
+        background: darkgoldenrod;
+        width: 100%;
+        height: 92%;
+    }
+
+        .main-page-welcome {
+            background: red;
+            width: 100%;
+            height: 100%;
+        }
+
+            .main-page-welcome-welcomeBox {
+                background: rgb(255, 173, 30);
+                width: 100%;
+                height: 50%;
+            }
+
+            .main-page-welcome-recentTitle {
+                background: rgb(5, 217, 255);
+                width: 100%;
+                height: 5%;
+            }
+            
+            .main-page-welcome-recentContainer {
+                background: whitesmoke;
+                width: 100%;
+                height: 45%;
+            }
+
+.main-container-aboutme {
     background: rgb(195, 135, 235);
-    width: 30%;
+    width: 25%;
     height: 65%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: column; /*makes the flex apply column like (changing this to ROW applys effects to WIDTH)*/
 }
 
-.box7 {
+    .aboutme-title {
+        background: darkmagenta;
+        width: 100%;
+        height: 8%;
+    }
+
+    .aboutme-photo {
+        background: rgb(60, 0, 155);
+        width: 100%;
+        min-height: 48%;
+        flex-grow: 1; /*fill the remaining space left from the decimals*/
+    }
+
+    .aboutme-tags {
+        background: rgb(139, 127, 0);
+        width: 100%;
+        height: 14.6%;
+    }
+
+    .aboutme-portfoilo {
+        background: rgb(139, 9, 0);
+        width: 100%;
+        height: 14.6%;
+    }
+
+    .aboutme-deardiary {
+        background: rgb(139, 0, 86);
+        width: 100%;
+        height: 14.6%;
+    }
+
+.main-container-divider {
     background: rgb(163, 235, 135);
     width: 100%;
     height: 3%;
 }
 
-.box8 {
+.main-container-footer {
     background: rgb(218, 143, 46);
     width: 100%;
     height: 7%;
+
+    display: flex;
+    overflow: hidden;
 }
 
+    .footer-movableObject {
+        position: relative;
+        pointer-events: none;
+    }
+
+        #object1{
+            background: whitesmoke;
+            animation: moving-object1 15s infinite linear;
+            width: 200px;
+        }
+
+        #object2{
+            background: rgb(0, 0, 0);
+            animation: moving-object2 15s infinite linear;
+            width: 200px;
+            left: 3000px;
+        }
+
+    @keyframes moving-object1 {
+        from{ left:calc(100% + 20px); }
+        to{ left:-400px; }
+    }
+
+    @keyframes moving-object2 {
+        from{ left:calc(100% + 20px); }
+        to{ left:-400px; }
+    }
+
 @media screen and (orientation: portrait) {
-    .box1 {
-        width: 100%;
+    /*"fullscreen the website on mobile"*/
+    .website-contents-container {
+        width: 100vw;
+        height: 100vh;
     }
-    .box2 {
-        width: 100%;
-    }
-    .box4 {
+
+    .main-container-userpanel {
         display: none;
     }
-    .box5 {
+    .main-container-main {
         width: 100%;
     }
-    .box6 {
+    .main-container-aboutme {
         width: 100%;
     }
 }
