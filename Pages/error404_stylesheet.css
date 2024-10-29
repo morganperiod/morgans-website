@@ -1,0 +1,94 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#error404_container {
+    z-index: 1;
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 100%;
+}
+
+.spirit_container {
+    background: red;
+    width: 100px;
+    height: 100px;
+}
+
+/* ------------------------- */
+
+#backend_container {
+    width: 100%;
+    height: 100%;
+    background: #0d1117;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#backend-leftside-container {
+    background: red;
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    padding: 1%;
+    gap: 1%;
+    box-sizing: border-box;
+}
+
+    #backend-container-icon {
+        background-color: blue;
+        width: 100%;
+        height: 30%;
+
+        border: 3px solid white
+    }
+
+    #backend-container-files {
+        background-color: blueviolet;
+        flex-grow: 1;
+
+        border: 3px solid white
+    }
+
+    #backend-container-info {
+        background-color: rgb(226, 43, 186);
+        height: 10%;
+
+        border: 3px solid white
+    }
+
+#backend-rightside-container {
+    background: yellow;
+    width: 75%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    padding: 1%;
+    gap: 1%;
+    box-sizing: border-box;
+}
+
+    #backend-container-main {
+        background-color: rgb(43, 226, 125);
+        flex-grow: 1;
+
+        border: 3px solid white
+    }
+
+    #backend-container-under {
+        background-color: rgb(226, 95, 43);
+        height: 10%;
+
+        border: 3px solid white
+    }

@@ -4,16 +4,32 @@
         <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
+        <script src="javascript.js"></script>
+
         <div class="website-contents-container">
             <div class="main-container-banner">
-                <div class="banner-icon"></div>
-                <div class="banner-miniicon banner-youtube"></div>
-                <div class="banner-miniicon banner-github"></div>
-                <div class="banner-miniicon banner-instagram"></div>
+                <div class="banner-icon" onclick="LoadMinigame('Key1')">
+                    <img class="banner-icon-image" src="Assets/_Main/Banner/icon_main.png"></img>
+                </div>
+                <div class="banner-miniicon banner-youtube" target="_blank">
+                    <a href="https://youtube.com">
+                        <img class="banner-miniicon-image" src="Assets/_Main/Banner/miniIcon_youtube.png"></img>
+                    </a>
+                </div>
+                <div class="banner-miniicon banner-github">
+                    <a href="https://github.com/morganperiod" target="_blank">
+                        <img class="banner-miniicon-image" src="Assets/_Main/Banner/miniIcon_github.png"></img>
+                    </a>
+                </div>
+                <div class="banner-miniicon banner-instagram">
+                    <a href="https://www.instagram.com/xx_morgan._xx/" target="_blank">
+                        <img class="banner-miniicon-image" src="Assets/_Main/Banner/miniIcon_instagram.png"></img>
+                    </a>
+                </div>
             </div>
             <div class="main-container-musicplayer"></div>
             <div class="main-container-userpanel"></div>
-            <div class="main-container-main">
+            <div id="main-container-main">
                 <div class="main-title"></div>
                 <div class="main-contents">
                     <div class="main-page-welcome">
@@ -35,6 +51,13 @@
                 <img class="footer-movableObject" id="object1" aria-hidden="true"/>
                 <img class="footer-movableObject" id="object2" aria-hidden="true"/>
             </div>
+        </div>
+
+        <!-- Minigame Mode -->
+        <div id="minigame-contents-container">
+            <canvas id="minigame-container">
+
+            </canvas>
         </div>
     </body>
 </html>
