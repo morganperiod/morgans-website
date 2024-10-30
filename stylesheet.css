@@ -123,32 +123,89 @@ body {
         background: darkmagenta;
         width: 100%;
         height: 8%;
+
+        display: flex;
+        justify-content: center;
     }
+
+        .aboutme-title-image {
+            background-image: url("Assets/_Main/AboutMe/title.png");
+            background-size:contain;
+            background-repeat:no-repeat;
+            background-position:center;
+            width:100%;
+            height: 100%;
+        }
 
     .aboutme-photo {
         background: rgb(60, 0, 155);
         width: 100%;
         min-height: 48%;
         flex-grow: 1; /*fill the remaining space left from the decimals*/
+
+        display: flex;
+        justify-content: center;
     }
+
+        .aboutme-photo-image {
+            background-image: url("Assets/_Main/AboutMe/selfi_0.png");
+            background-size:contain;
+            background-repeat:no-repeat;
+            background-position:center;
+            width:100%;
+            height: 100%;
+        }
 
     .aboutme-tags {
         background: rgb(139, 127, 0);
         width: 100%;
         height: 14.6%;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+        padding: 3%;
+
+        box-sizing: border-box;
     }
 
     .aboutme-portfoilo {
         background: rgb(139, 9, 0);
         width: 100%;
         height: 14.6%;
+
+        display: flex;
+        justify-content: center;
     }
+
+        .aboutme-portfoilo-image {
+            background-image: url("Assets/_Main/AboutMe/portfolio.png");
+            background-size:contain;
+            background-repeat:no-repeat;
+            background-position:center;
+            width:100%;
+            height: 100%;
+        }
 
     .aboutme-deardiary {
         background: rgb(139, 0, 86);
         width: 100%;
         height: 14.6%;
+
+        display: flex;
+        justify-content: center;
     }
+
+        .aboutme-deardiary-image {
+            background-image: url("Assets/_Main/AboutMe/dear_diary.png");
+            background-size:contain;
+            background-repeat:no-repeat;
+            background-position:center;
+            width:100%;
+            height: 100%;
+        }
 
 .main-container-divider {
     background: rgb(163, 235, 135);

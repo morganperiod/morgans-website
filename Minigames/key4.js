@@ -3,6 +3,12 @@ const ctx = canvas.getContext('2d');
 canvas.width = document.body.clientWidth;
 canvas.height = document.body.clientHeight;
 console.log(canvas.width + "   " + canvas.height);
+
+const floorY = 735;
+
+const canvasWidth = canvas.width/document.getElementById('minigame-container').clientWidth;
+const canvasHeight = canvas.height/document.getElementById('minigame-container').clientHeight;
+
 /*
 function init() {
     //character.x -= 1;
@@ -20,9 +26,9 @@ let characterImage = new Image();
 characterImage.src = 'Assets/Minigames/key4.png';
 let character = {
     x: 0,
-    y: 700, // Start near the bottom
-    width: 297.36,
-    height: 297.36,
+    y: floorY, // Start near the bottom
+    width: 168 * canvasWidth,
+    height: 168 * canvasHeight,
     color: 'pink',
     speed: (3.5*10)*1.5,
     gravity: 1*6,
@@ -80,7 +86,7 @@ function update(currentTime) {
         ctx.drawImage(characterImage, character.x, character.y, character.width, character.height);
 
         // Draw Item Box
-        ctx.drawImage(itemBoxHolder, 60, 50, 156*1.77, 156*1.53);
+        ctx.drawImage(itemBoxHolder, 60, 50, 156*canvasWidth, 156*canvasHeight);
 
         // Draw collectibles
         balloons.forEach(balloon => {
@@ -90,7 +96,7 @@ function update(currentTime) {
         checkCollisions();
 
         // Draw item
-        if (character.currentItem == 'balloon') { ctx.drawImage(balloonImage, 60, 50, 156*1.77, 156*1.53); }
+        if (character.currentItem == 'balloon') { ctx.drawImage(balloonImage, 60, 50, 156*canvasWidth, 156*canvasHeight); }
 
         // Draw scanlines
         ctx.drawImage(overlay, 0, 0, canvas.width, canvas.height);
@@ -121,8 +127,8 @@ function updatecharacter() {
         character.y += character.velocityY;
 
         // Check if character has landed
-        if (character.y >= 700) { // Ground level
-            character.y = 700;
+        if (character.y >= floorY) { // Ground level
+            character.y = floorY;
             character.isJumping = false;
             character.velocityY = 0;
         }
@@ -173,9 +179,9 @@ function createCollectibles() {
     for (let i = 0; i < 1; i++) {
         balloons.push({
             x: 700,
-            y: 600+((156*1.53)/2),
-            width: 156*1.77,
-            height: 156*1.53,
+            y: floorY,
+            width: 156*canvasWidth,
+            height: 156*canvasHeight,
             color: 'gold'
         });
     }

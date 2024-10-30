@@ -37,3 +37,11 @@ function LoadBackend() {
     document.getElementById("error404_container").style.visibility = 'hidden';
     document.getElementById("key_container_5").style.visibility = "hidden";
 }
+
+function Highlight(element) {
+    element.style.background = '#141a24';
+}
+
+function Dehighlight(element) {
+    element.style.background = '';
+}
